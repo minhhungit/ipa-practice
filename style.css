@@ -55,6 +55,7 @@ body {
     padding: 80px 50px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+    margin-top: 100px;
 }
 
 .word-container.all{
@@ -62,6 +63,7 @@ body {
     position: unset;
     transform: unset;
     overflow: hidden;
+    margin-top: 100px;
 }
 
 .word-entry {
@@ -76,7 +78,7 @@ body {
     border-radius: 10px;
     margin: 20px;
     border-radius: 10px;
-    width: 31%;
+    width: 30%;
     float: left;
 }
 
