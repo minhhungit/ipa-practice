@@ -47,7 +47,7 @@ body {
 .word-container {
     cursor: pointer;
     background-color: #FEF9D9;
-    width: 75vmin;
+    width: 90vmin;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 35%;
@@ -63,7 +63,7 @@ body {
     position: unset;
     transform: unset;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .word-entry {
