@@ -47,7 +47,7 @@ body {
 .word-container {
     cursor: pointer;
     background-color: #FEF9D9;
-    width: 90vmin;
+    width: 90%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 35%;
