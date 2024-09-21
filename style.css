@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:not(i) {
+    font-family: "Voces", sans-serif;
+}
+body {
+    background-color: #d2e9fb;
+}
+.no_selection {
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.vowel-menu {
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+}
+
+.vowel-menu > .vowel{
+    font-size: 20px;
+    padding: 12px 10px;
+    margin: 10px;
+    color: #838383;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+
+.vowel-menu > .vowel.active{
+    color: #ff3b3b; 
+}
+
+.word-container {
+    cursor: pointer;
+    background-color: #FEF9D9;
+    width: 75vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    padding: 80px 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+}
+
+.word-container.all{
+    width: unset; 
+    position: unset;
+    transform: unset;
+    overflow: hidden;
+}
+
+.word-entry {
+    position: relative;
+}
+
+.word-entry.all{
+    position: relative;
+    padding: 10px;
+    background: #dbdbdb;
+    margin: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 31%;
+    float: left;
+}
+
+.word-entry h3 {
+    font-size: 72px;
+    color: #5e5e5e;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.word-entry h3 b {
+    color: #3d3d3d;
+    font-weight: 700;
+}
+.word-entry .word {
+    display: flex;
+    justify-content: space-between;
+}
+.word-entry .details {
+    display: flex;
+    gap: 10px;
+    color: #5e5e5e;
+    font-size: 46px;
+}
+.vowel {
+    color: #ff3b3b;
+}
+.consonant {
+    color: #4a6fff;
+}
