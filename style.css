@@ -48,9 +48,11 @@ body {
 
 .vowel {
     color: #ff3b3b;
+    font-weight: 700;
 }
 .consonant {
     color: #4a6fff;
+    font-weight: 700;
 }
 
 .no_selection {
