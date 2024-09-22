@@ -441,7 +441,7 @@ $(document).ready(function(){
             <div class="card p-0 show" data-name="${item.vowel}">
                 <div class="card-body">
                     <h2 class="card-title">${boldWordEnd(item)}</h2>
-                    <h4 class="card-text">/ ${formatPhoneticText(item.phonetic)}/</h4>
+                    <h5 class="card-text">/ ${formatPhoneticText(item.phonetic)}/</h5>
                 </div>
             </div>`);
 
