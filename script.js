@@ -12,8 +12,28 @@ $(document).ready(function(){
         "dʒ", "m", "n", "ŋ", "w", "r", "l", "h"
     ];
 
-    vowelItems.forEach((v, idx) =>{
-        $("#filter-buttons .col-12").append(`<button class="btn mb-2 mx-1" data-filter="${v}">${v}</button>`);
+    const vowelMenuItems = [
+        "ɑ:", 
+        "aɪ", 
+        "aʊ", 
+        "ɔ:", 
+        "ɔɪ", 
+        "oʊ",
+        "e"
+    ];
+
+    const vowelVersusMenuItems = [
+        ["ɑ:", "ɔ:"],
+        ["ɑ:", "oʊ"],
+    ]
+
+
+    vowelMenuItems.forEach((v, idx) =>{
+        $("#filter-buttons .vowels").append(`<button class="btn mb-2 mx-1" data-filter="${v}">${v}</button>`);
+    });
+
+    vowelVersusMenuItems.forEach((v, idx) =>{
+        $("#filter-buttons .vowels-versus").append(`<button class="btn mb-2 mx-1" data-filter="${v[0]} vs. ${v[1]}">${v[0]} <span style="color: #333; font-size: .8rem; font-style: italic; pointer-events: none;">vs.</span> ${v[1]}</button>`);
     });
     
     const wordBank = [
@@ -317,10 +337,147 @@ $(document).ready(function(){
         {vowel: 'e', word: "stair", phonetic: "s t e r", end: "r"},
         {vowel: 'e', word: "chair", phonetic: "t j e r", end: "r"},
         {vowel: 'e', word: "prayer", phonetic: "p r e r", end: "r"}        
-    ]; 
+    ];
+    
+    const wordVersusBank = [
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "awe", phonetic: "ɑ:", end: ""}, 
+            {word: "or", phonetic: "ɔ: r", end: "r"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "paw", phonetic: "p ɑ:", end: ""}, 
+            {word: "pore", phonetic: "p ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "saw", phonetic: "s ɑ:", end: ""}, 
+            {word: "sore", phonetic: "s ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "maw", phonetic: "m ɑ:", end: ""}, 
+            {word: "more", phonetic: "m ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "law", phonetic: "l ɑ:", end: ""}, 
+            {word: "lord", phonetic: "l ɔ: r d", end: "rd"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "bar", phonetic: "b ɑ: r", end: "r"}, 
+            {word: "bore", phonetic: "b ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "car", phonetic: "k ɑ: r", end: "r"}, 
+            {word: "core", phonetic: "k ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "far", phonetic: "f ɑ: r", end: "r"}, 
+            {word: "for", phonetic: "f ɔ: r", end: "r"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "heart", phonetic: "h ɑ: r t", end: "rt"}, 
+            {word: "hoard", phonetic: "h ɔ: r d", end: "rd"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "part", phonetic: "p ɑ: r t", end: "rt"}, 
+            {word: "port", phonetic: "p ɔ: r t", end: "rt"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "dark", phonetic: "d ɑ: r k", end: "rk"}, 
+            {word: "dork", phonetic: "d ɔ: r k", end: "rk"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "harsh", phonetic: "h ɑ: r ʃ", end: "rsh"}, 
+            {word: "horse", phonetic: "h ɔ: r s", end: "rse"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "guard", phonetic: "ɡ ɑ: r d", end: "rd"}, 
+            {word: "gore", phonetic: "ɡ ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "flaw", phonetic: "f l ɑ:", end: "w"}, 
+            {word: "floor", phonetic: "f l ɔ: r", end: "r"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "scar", phonetic: "s k ɑ: r", end: "r"}, 
+            {word: "score", phonetic: "s k ɔ: r", end: "re"}]
+        },
+        {vowel: 'ɑ: vs. ɔ:', words: [
+            {word: "star", phonetic: "s t ɑ: r", end: "r"}, 
+            {word: "store", phonetic: "s t ɔ: r", end: "re"}]
+        },
 
-    function getWordsByvowel(vowelNumbers) {
-        return wordBank.filter(item => vowelNumbers.includes(item.vowel));
+
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "cod", phonetic: "k ɑ: d", end: "d"}, 
+            {word: "code", phonetic: "k oʊ d", end: "de"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "not", phonetic: "n ɑ: t", end: "t"}, 
+            {word: "note", phonetic: "n oʊ t", end: "te"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "bought", phonetic: "b ɑ: t", end: "ght"}, 
+            {word: "boat", phonetic: "b oʊ t", end: "t"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "lot", phonetic: "l ɑ: t", end: "t"}, 
+            {word: "load", phonetic: "l oʊ d", end: "d"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "hop", phonetic: "h ɑ: p", end: "p"}, 
+            {word: "hope", phonetic: "h oʊ p", end: "pe"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "mod", phonetic: "m ɑ: d", end: "d"}, 
+            {word: "mode", phonetic: "m oʊ d", end: "de"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "shop", phonetic: "ʃ ɑ: p", end: "p"}, 
+            {word: "soap", phonetic: "s oʊ p", end: "p"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "lost", phonetic: "l ɑ: s t", end: "st"}, 
+            {word: "most", phonetic: "m oʊ s t", end: "st"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "cost", phonetic: "k ɑ: s t", end: "st"}, 
+            {word: "coast", phonetic: "k oʊ s t", end: "st"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "font", phonetic: "f ɑ: n t", end: "nt"}, 
+            {word: "phone", phonetic: "f oʊ n", end: "ne"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "got", phonetic: "g ɑ: t", end: "t"}, 
+            {word: "goat", phonetic: "g oʊ t", end: "t"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "gone", phonetic: "g ɑ: n", end: "ne"}, 
+            {word: "goal", phonetic: "g oʊ l", end: "l"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "rod", phonetic: "r ɑ: d", end: "d"}, 
+            {word: "road", phonetic: "r oʊ d", end: "d"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "bond", phonetic: "b ɑ: n d", end: "nd"}, 
+            {word: "bone", phonetic: "b oʊ n", end: "ne"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "broad", phonetic: "b r ɑ: d", end: "d"}, 
+            {word: "broke", phonetic: "b r oʊ k", end: "ke"}]
+        },
+        {vowel: 'ɑ: vs. oʊ', words: [
+            {word: "jog", phonetic: "d j ɑ: ɡ", end: "g"}, 
+            {word: "joke", phonetic: "d j oʊ k", end: "ke"}]
+        },
+    ];
+
+    function getWordsByVowel(keys) {
+        return wordBank.filter(item => keys.includes(item.vowel));
+    }
+
+    function getWordsByVowelVersus(keys) {
+        return wordVersusBank.filter(item => keys.includes(item.vowel));
     }
 
     function formatPhoneticText(text) {
@@ -397,11 +554,10 @@ $(document).ready(function(){
         }
     }
 
-    function boldWordEnd(data) {
-        if (data == null || typeof data == 'undefined')
+    function boldWordEnd(word, end) {
+        if (word == null || typeof word == 'undefined')
             return;
 
-        const { word, end } = data;
         const endIndex = word.lastIndexOf(end);
         
         if (endIndex === -1) {
@@ -414,19 +570,37 @@ $(document).ready(function(){
         return `${regularPart}<b>${boldPart}</b>`;
     }
     
-    function updateInterface(isNext){
-        
-        let selectedVowels = $("#filter-buttons button.active").map(function() {
-            return $(this).text();
-        }).get();
+    function updateInterface(isNext, isVersusMode){
+        let selectedVowelKeys = [];
+        if (isVersusMode){
+            selectedVowelKeys = $("#filter-buttons .vowels-versus button.active").map(function() {
+                return $(this).text();
+            }).get();
+        }
+        else{
+            selectedVowelKeys = $("#filter-buttons .vowels button.active").map(function() {
+                return $(this).text();
+            }).get();
+        }        
 
         var selectedWordBank = [];
-        if (selectedVowels != null && typeof selectedVowels != 'undefined' && selectedVowels.length > 0){
-            selectedWordBank = getWordsByvowel(selectedVowels);
+
+        if (selectedVowelKeys != null && typeof selectedVowelKeys != 'undefined' && selectedVowelKeys.length > 0){
+            if (isVersusMode){
+                selectedWordBank = getWordsByVowelVersus(selectedVowelKeys);
+            }
+            else{
+                selectedWordBank = getWordsByVowel(selectedVowelKeys);
+            }            
         }
-        else{            
-            selectedWordBank = wordBank;
-        }
+        else{      
+            if(isVersusMode){
+                selectedWordBank = wordVersusBank;
+            }
+            else{
+                selectedWordBank = wordBank;
+            }            
+        }   
 
         if (selectedWordBank == null || typeof selectedWordBank == 'undefined' || selectedWordBank.length == 0){
             $("#filterable-cards").html("");
@@ -443,23 +617,53 @@ $(document).ready(function(){
         $("#filterable-cards").html("");
 
         selectedWordBank.forEach((item, idx)=>{
-            let wordEntryElement = $(`
-            <div class="card p-0 show" data-name="${item.vowel}">
-                <div class="card-body">
-                    <h2 class="card-title">${boldWordEnd(item)}</h2>
-                    <h5 class="card-text">/ ${formatPhoneticText(item.phonetic)} /</h5>
-                </div>
-            </div>`);
-
-            $("#filterable-cards").append(wordEntryElement);
+            if (item != null && typeof item != "undefined"){
+                if (isVersusMode){
+                    let wordEntryElement = $(`
+                        <div class="card p-0 show" data-name="${item.vowel}">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item versus-word" style="border: none; background: unset;">
+                                    <h2 class="card-title">${boldWordEnd(item?.words[0]?.word, item?.words[0]?.end)}</h2>
+                                    <h5 class="card-text">/ ${formatPhoneticText(item?.words[0]?.phonetic)} /</h5>
+                                </li>
+                                <li class="list-group-item versus-vstext" style="border: none; background: unset;"><span>vs.<span></li>
+                                <li class="list-group-item versus-word" style="border: none; background: unset;">
+                                    <h2 class="card-title">${boldWordEnd(item?.words[1]?.word, item?.words[1]?.end)}</h2>
+                                    <h5 class="card-text">/ ${formatPhoneticText(item?.words[1]?.phonetic)} /</h5>
+                                </li>
+                            </ul>
+                        </div>`);
+            
+                        $("#filterable-cards").append(wordEntryElement);
+                }
+                else{
+                    let wordEntryElement = $(`
+                        <div class="card p-0 show" data-name="${item.vowel}">
+                            <div class="card-body">
+                                <h2 class="card-title">${boldWordEnd(item.word, item.end)}</h2>
+                                <h5 class="card-text">/ ${formatPhoneticText(item.phonetic)} /</h5>
+                            </div>
+                        </div>`);
+            
+                        $("#filterable-cards").append(wordEntryElement);
+                } 
+            }
         });
     }
 
-    updateInterface(true);
+    updateInterface(true, false);
 
-    $("#filter-buttons button").click(e =>{
+    $("#filter-buttons .vowels button").click(e =>{
+        $("#filter-buttons .vowels-versus button").removeClass("active");
         $(e.target).toggleClass("active");
-        updateInterface(true);
+        updateInterface(true, false);
+    });
+
+    // Versus mode
+    $("#filter-buttons .vowels-versus button").click(e =>{
+        $("#filter-buttons .vowels button").removeClass("active");
+        $(e.target).toggleClass("active");
+        updateInterface(true, true);
     });
 
     // $(document).on('click', function(e) {

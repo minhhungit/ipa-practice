@@ -62,3 +62,24 @@ body {
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
 }
+
+.versus-word{
+    font-size: 2rem;
+}
+
+.versus-phonetic{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.versus-vstext{
+    color: #0093ff;
+    text-align: center;
+}
+
+.versus-vstext span{
+    text-decoration: underline;
+    font-style: italic;
+    background: #e6ffc7; 
+    padding: 2px;
+}
