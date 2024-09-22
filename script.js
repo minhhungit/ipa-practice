@@ -33,7 +33,7 @@ $(document).ready(function(){
         {vowel: 'ɑ:', word: "car", phonetic: "kɑ:r", end: "r"},
         {vowel: 'ɑ:', word: "guard", phonetic: "gɑ:rd", end: "rd"},
         {vowel: 'ɑ:', word: "fault", phonetic: "fɑ:lt", end: "lt"},
-        {vowel: 'ɑ:', word: "card", phonetic: "cɑ:rd", end: "rd"},
+        {vowel: 'ɑ:', word: "card", phonetic: "kɑ:rd", end: "rd"},
         {vowel: 'ɑ:', word: "carve", phonetic: "kɑ:rv", end: "rve"},
         {vowel: 'ɑ:', word: "dark", phonetic: "dɑ:rk", end: "rk"},
         {vowel: 'ɑ:', word: "dart", phonetic: "dɑ:rt", end: "rt"},
