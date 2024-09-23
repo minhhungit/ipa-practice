@@ -19,7 +19,8 @@ $(document).ready(function(){
         "ɔ:", 
         "ɔɪ", 
         "oʊ",
-        "e"
+        "e",
+        "eɪ"
     ];
 
     const vowelVersusMenuItems = [
@@ -336,7 +337,50 @@ $(document).ready(function(){
         {vowel: 'e', word: "shelves", phonetic: "ʃ e l v z", end: "lves"},
         {vowel: 'e', word: "stair", phonetic: "s t e r", end: "r"},
         {vowel: 'e', word: "chair", phonetic: "t j e r", end: "r"},
-        {vowel: 'e', word: "prayer", phonetic: "p r e r", end: "r"}        
+        {vowel: 'e', word: "prayer", phonetic: "p r e r", end: "r"},
+
+        {vowel: 'eɪ', word: "day", phonetic: "d eɪ", end: ""},
+        {vowel: 'eɪ', word: "gay", phonetic: "g eɪ", end: ""},
+        {vowel: 'eɪ', word: "say", phonetic: "s eɪ", end: ""},
+        {vowel: 'eɪ', word: "pay", phonetic: "p eɪ", end: ""},
+        {vowel: 'eɪ', word: "may", phonetic: "m eɪ", end: ""},
+        {vowel: 'eɪ', word: "mate", phonetic: "m eɪ t", end: "te"},
+        {vowel: 'eɪ', word: "make", phonetic: "m eɪ k", end: "ke"},
+        {vowel: 'eɪ', word: "made", phonetic: "m eɪ d", end: "de"},
+        {vowel: 'eɪ', word: "mail", phonetic: "m eɪ l", end: "l"},
+        {vowel: 'eɪ', word: "maze", phonetic: "m eɪ z", end: "ze"},
+        {vowel: 'eɪ', word: "main", phonetic: "m eɪ n", end: "n"},
+        {vowel: 'eɪ', word: "bake", phonetic: "b eɪ k", end: "ke"},
+        {vowel: 'eɪ', word: "cake", phonetic: "k eɪ k", end: "ke"},
+        {vowel: 'eɪ', word: "case", phonetic: "k eɪ s", end: "se"},
+        {vowel: 'eɪ', word: "face", phonetic: "f eɪ s", end: "ce"},
+        {vowel: 'eɪ', word: "fate", phonetic: "f eɪ t", end: "te"},
+        {vowel: 'eɪ', word: "faith", phonetic: "f eɪ θ", end: "th"},
+        {vowel: 'eɪ', word: "fade", phonetic: "f eɪ d", end: "de"},
+        {vowel: 'eɪ', word: "fake", phonetic: "f eɪ k", end: "ke"},
+        {vowel: 'eɪ', word: "fail", phonetic: "f eɪ l", end: "l"},
+        {vowel: 'eɪ', word: "date", phonetic: "d eɪ t", end: "te"},
+        {vowel: 'eɪ', word: "late", phonetic: "l eɪ t", end: "te"},
+        {vowel: 'eɪ', word: "lane", phonetic: "l eɪ n", end: "ne"},
+        {vowel: 'eɪ', word: "gaze", phonetic: "g eɪ z", end: "ze"},
+        {vowel: 'eɪ', word: "game", phonetic: "g eɪ m", end: "me"},
+        {vowel: 'eɪ', word: "name", phonetic: "n eɪ m", end: "me"},
+        {vowel: 'eɪ', word: "paid", phonetic: "p eɪ d", end: "d"},
+        {vowel: 'eɪ', word: "wait", phonetic: "w eɪ t", end: "t"},
+        {vowel: 'eɪ', word: "wave", phonetic: "w eɪ v", end: "ve"},
+        {vowel: 'eɪ', word: "safe", phonetic: "s eɪ f", end: "fe"},
+        {vowel: 'eɪ', word: "save", phonetic: "s eɪ v", end: "ve"},
+        {vowel: 'eɪ', word: "saint", phonetic: "s eɪ n t", end: "nt"},
+        {vowel: 'eɪ', word: "faint", phonetic: "f eɪ n t", end: "nt"},
+        {vowel: 'eɪ', word: "paste", phonetic: "p eɪ s t", end: "ste"},
+        {vowel: 'eɪ', word: "play", phonetic: "p l eɪ", end: ""},
+        {vowel: 'eɪ', word: "place", phonetic: "p l eɪ s", end: "ce"},
+        {vowel: 'eɪ', word: "plate", phonetic: "p l eɪ t", end: "te"},
+        {vowel: 'eɪ', word: "plane", phonetic: "p l eɪ n", end: "ne"},
+        {vowel: 'eɪ', word: "break", phonetic: "b r eɪ k", end: "k"},
+        {vowel: 'eɪ', word: "great", phonetic: "g r eɪ t", end: "t"},
+        {vowel: 'eɪ', word: "brain", phonetic: "b r eɪ n", end: "n"},
+        {vowel: 'eɪ', word: "chase", phonetic: "t j eɪ s", end: "se"},
     ];
     
     const wordVersusBank = [
@@ -623,13 +667,13 @@ $(document).ready(function(){
                         <div class="card p-0 show" data-name="${item.vowel}">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item versus-word" style="border: none; background: unset;">
-                                    <h2 class="card-title">${boldWordEnd(item?.words[0]?.word, item?.words[0]?.end)}</h2>
-                                    <h5 class="card-text">/ ${formatPhoneticText(item?.words[0]?.phonetic)} /</h5>
+                                    <h4 class="card-title">/ ${formatPhoneticText(item?.words[0]?.phonetic)} /</h4>
+                                    <h5 class="card-text">${boldWordEnd(item?.words[0]?.word, item?.words[0]?.end)}</h5>
                                 </li>
                                 <li class="list-group-item versus-vstext" style="border: none; background: unset;"><span>vs.<span></li>
                                 <li class="list-group-item versus-word" style="border: none; background: unset;">
-                                    <h2 class="card-title">${boldWordEnd(item?.words[1]?.word, item?.words[1]?.end)}</h2>
-                                    <h5 class="card-text">/ ${formatPhoneticText(item?.words[1]?.phonetic)} /</h5>
+                                    <h4 class="card-title">/ ${formatPhoneticText(item?.words[1]?.phonetic)} /</h4>
+                                    <h5 class="card-text">${boldWordEnd(item?.words[1]?.word, item?.words[1]?.end)}</h5>
                                 </li>
                             </ul>
                         </div>`);
@@ -640,8 +684,8 @@ $(document).ready(function(){
                     let wordEntryElement = $(`
                         <div class="card p-0 show" data-name="${item.vowel}">
                             <div class="card-body">
-                                <h2 class="card-title">${boldWordEnd(item.word, item.end)}</h2>
-                                <h5 class="card-text">/ ${formatPhoneticText(item.phonetic)} /</h5>
+                                <h4 class="card-title">/ ${formatPhoneticText(item.phonetic)} /</h4>
+                                <h5 class="card-text">${boldWordEnd(item.word, item.end)}</h5>
                             </div>
                         </div>`);
             
