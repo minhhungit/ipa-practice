@@ -861,18 +861,18 @@ $(document).ready(function(){
 
     updateInterface(true, false);
 
-    $("#filter-buttons .vowels button").click(e =>{
-        $("#filter-buttons .vowels-versus button").removeClass("active");
+    $("#filter-buttons button").click(e =>{
+        $("#filter-buttons button").not(e.target).removeClass("active");
         $(e.target).toggleClass("active");
         updateInterface(true, false);
     });
 
-    // Versus mode
-    $("#filter-buttons .vowels-versus button").click(e =>{
-        $("#filter-buttons .vowels button").removeClass("active");
-        $(e.target).toggleClass("active");
-        updateInterface(true, true);
-    });
+    // // Versus mode
+    // $("#filter-buttons .vowels-versus button").click(e =>{
+    //     $("#filter-buttons button").not(e.target).removeClass("active");
+    //     $(e.target).toggleClass("active");
+    //     updateInterface(true, true);
+    // });
 
     // $(document).on('click', function(e) {
     //     var screenWidth = $(window).width();
