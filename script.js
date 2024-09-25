@@ -577,108 +577,108 @@ $(document).ready(function(){
         },//-------------------
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "men", phonetic: "m e n", end: "n"}, 
-            {word: "man", phonetic: "m æ n", end: "n"},
-            {word: "main", phonetic: "m eɪ n", end: "n"}]
+            {word: "main", phonetic: "m eɪ n", end: "n"},
+            {word: "man", phonetic: "m æ n", end: "n"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "med", phonetic: "m e d", end: "d"}, 
-            {word: "mad", phonetic: "m æ d", end: "d"},
-            {word: "made", phonetic: "m eɪ d", end: "de"}]
+            {word: "made", phonetic: "m eɪ d", end: "de"},
+            {word: "mad", phonetic: "m æ d", end: "d"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
-            {word: "beg", phonetic: "b e ɡ", end: "g"}, 
-            {word: "bag", phonetic: "b æ ɡ", end: "g"},
-            {word: "bake", phonetic: "b eɪ k", end: "ke"}]
+            {word: "beg", phonetic: "b e ɡ", end: "g"},
+            {word: "bake", phonetic: "b eɪ k", end: "ke"}, 
+            {word: "bag", phonetic: "b æ ɡ", end: "g"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "het", phonetic: "h e t", end: "t"}, 
-            {word: "hat", phonetic: "h æ t", end: "t"},
-            {word: "hate", phonetic: "h eɪ t", end: "te"}]
+            {word: "hate", phonetic: "h eɪ t", end: "te"},
+            {word: "hat", phonetic: "h æ t", end: "t"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "fed", phonetic: "f e d", end: "d"}, 
-            {word: "fad", phonetic: "f æ d", end: "d"},
-            {word: "fade", phonetic: "f eɪ d", end: "de"}]
+            {word: "fade", phonetic: "f eɪ d", end: "de"},
+            {word: "fad", phonetic: "f æ d", end: "d"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "said", phonetic: "s e d", end: "d"}, 
-            {word: "sad", phonetic: "s æ d", end: "d"},
-            {word: "sate", phonetic: "s eɪ t", end: "te"}]
+            {word: "sate", phonetic: "s eɪ t", end: "te"},
+            {word: "sad", phonetic: "s æ d", end: "d"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "pet", phonetic: "p e t", end: "t"}, 
-            {word: "pat", phonetic: "p æ t", end: "t"},
-            {word: "pate", phonetic: "p eɪ t", end: "te"}]
+            {word: "pate", phonetic: "p eɪ t", end: "te"},
+            {word: "pat", phonetic: "p æ t", end: "t"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "debt", phonetic: "d e t", end: "bt"}, 
-            {word: "DAT", phonetic: "d æ t", end: "T"},
-            {word: "date", phonetic: "d eɪ t", end: "te"}]
+            {word: "date", phonetic: "d eɪ t", end: "te"},
+            {word: "DAT", phonetic: "d æ t", end: "T"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "rent", phonetic: "r e n t", end: "nt"}, 
-            {word: "ran", phonetic: "r æ n", end: "n"},
-            {word: "rain", phonetic: "r eɪ n", end: "n"}]
+            {word: "rain", phonetic: "r eɪ n", end: "n"},
+            {word: "ran", phonetic: "r æ n", end: "n"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "lend", phonetic: "l e n d", end: "nd"}, 
-            {word: "land", phonetic: "l æ n d", end: "nd"},
-            {word: "lane", phonetic: "l eɪ n", end: "ne"}]
+            {word: "lane", phonetic: "l eɪ n", end: "ne"},
+            {word: "land", phonetic: "l æ n d", end: "nd"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "lest", phonetic: "l e s t", end: "st"}, 
-            {word: "last", phonetic: "l æ s t", end: "st"},
-            {word: "lace", phonetic: "l eɪ s", end: "ce"}]
+            {word: "lace", phonetic: "l eɪ s", end: "ce"},
+            {word: "last", phonetic: "l æ s t", end: "st"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "vest", phonetic: "v e s t", end: "st"}, 
-            {word: "vast", phonetic: "v æ s t", end: "st"},
-            {word: "vase", phonetic: "v eɪ s", end: "se"}]
+            {word: "vase", phonetic: "v eɪ s", end: "se"},
+            {word: "vast", phonetic: "v æ s t", end: "st"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "pest", phonetic: "p e s t", end: "st"}, 
-            {word: "past", phonetic: "p æ s t", end: "st"},
-            {word: "paste", phonetic: "p eɪ s t", end: "ste"}]
+            {word: "paste", phonetic: "p eɪ s t", end: "ste"},
+            {word: "past", phonetic: "p æ s t", end: "st"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "send", phonetic: "s e n d", end: "nd"}, 
-            {word: "sand", phonetic: "s æ n d", end: "nd"},
-            {word: "saint", phonetic: "s eɪ n t", end: "nt"}]
+            {word: "saint", phonetic: "s eɪ n t", end: "nt"},
+            {word: "sand", phonetic: "s æ n d", end: "nd"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "chef", phonetic: "ʃ e f", end: "f"}, 
-            {word: "shaft", phonetic: "ʃ æ f t", end: "ft"},
-            {word: "shape", phonetic: "ʃ eɪ p", end: "pe"}]
+            {word: "shape", phonetic: "ʃ eɪ p", end: "pe"},
+            {word: "shaft", phonetic: "ʃ æ f t", end: "ft"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "test", phonetic: "t e s t", end: "st"}, 
-            {word: "task", phonetic: "t æ s k", end: "sk"},
-            {word: "taste", phonetic: "t eɪ s t", end: "ste"}]
+            {word: "taste", phonetic: "t eɪ s t", end: "ste"},
+            {word: "task", phonetic: "t æ s k", end: "sk"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "ketch", phonetic: "k e tʃ", end: "tch"}, 
-            {word: "catch", phonetic: "k æ tʃ", end: "tch"},
-            {word: "cage", phonetic: "k eɪ dʒ", end: "ge"}]
+            {word: "cage", phonetic: "k eɪ dʒ", end: "ge"},
+            {word: "catch", phonetic: "k æ tʃ", end: "tch"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "cress", phonetic: "k r e s", end: "ss"}, 
-            {word: "crass", phonetic: "k r æ s", end: "ss"},
-            {word: "craze", phonetic: "k r eɪ z", end: "ze"}]
+            {word: "craze", phonetic: "k r eɪ z", end: "ze"},
+            {word: "crass", phonetic: "k r æ s", end: "ss"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "bread", phonetic: "b r e d", end: "d"}, 
-            {word: "brag", phonetic: "b r æ ɡ", end: "g"},
-            {word: "break", phonetic: "b r eɪ k", end: "k"}]
+            {word: "break", phonetic: "b r eɪ k", end: "k"},
+            {word: "brag", phonetic: "b r æ ɡ", end: "g"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "dreck", phonetic: "d r e k", end: "ck"}, 
-            {word: "drag", phonetic: "d r æ ɡ", end: "g"},
-            {word: "drake", phonetic: "d r eɪ k", end: "ke"}]
+            {word: "drake", phonetic: "d r eɪ k", end: "ke"},
+            {word: "drag", phonetic: "d r æ ɡ", end: "g"}]
         },
         {vowel: 'e vs. eɪ vs. æ', words: [
             {word: "trek", phonetic: "t r e k", end: "k"}, 
-            {word: "track", phonetic: "t r æ k", end: "ck"},
-            {word: "trade", phonetic: "t r eɪ d", end: "de"}]
+            {word: "trade", phonetic: "t r eɪ d", end: "de"},
+            {word: "track", phonetic: "t r æ k", end: "ck"}]
         },
     ];
 
