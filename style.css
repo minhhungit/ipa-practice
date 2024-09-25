@@ -72,14 +72,20 @@ body {
     font-weight: 500;
 }
 
-.versus-vstext{
+.versus-card-text{
     color: #0093ff;
     text-align: center;
+    pointer-events: none;
+    border: none; background: unset;
 }
 
-.versus-vstext span{
+.versus-card-text span{
     text-decoration: underline;
     font-style: italic;
     background: #e6ffc7; 
     padding: 2px;
+}
+
+.versus-menu-text{
+    color: #333; font-size: .8rem; font-style: italic; pointer-events: none;
 }

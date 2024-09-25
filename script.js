@@ -20,12 +20,14 @@ $(document).ready(function(){
         "ɔɪ", 
         "oʊ",
         "e",
-        "eɪ"
+        "eɪ",
+        "æ"
     ];
 
     const vowelVersusMenuItems = [
         ["ɑ:", "ɔ:"],
         ["ɑ:", "oʊ"],
+        ["e", "eɪ", "æ"],
     ]
 
 
@@ -34,7 +36,7 @@ $(document).ready(function(){
     });
 
     vowelVersusMenuItems.forEach((v, idx) =>{
-        $("#filter-buttons .vowels-versus").append(`<button class="btn mb-2 mx-1" data-filter="${v[0]} vs. ${v[1]}">${v[0]} <span style="color: #333; font-size: .8rem; font-style: italic; pointer-events: none;">vs.</span> ${v[1]}</button>`);
+        $("#filter-buttons .vowels-versus").append(`<button class="btn mb-2 mx-1" data-filter="${v.join(' vs. ')}">${v.join(" <span class='versus-menu-text'>vs.</span> ")}</button>`);
     });
     
     const wordBank = [
@@ -381,6 +383,49 @@ $(document).ready(function(){
         {vowel: 'eɪ', word: "great", phonetic: "g r eɪ t", end: "t"},
         {vowel: 'eɪ', word: "brain", phonetic: "b r eɪ n", end: "n"},
         {vowel: 'eɪ', word: "chase", phonetic: "t j eɪ s", end: "se"},
+
+        {vowel: 'æ', word: "add", phonetic: "æ d", end: "dd"},
+        {vowel: 'æ', word: "as", phonetic: "æ z", end: "s"},
+        {vowel: 'æ', word: "bad", phonetic: "b æ d", end: "d"},
+        {vowel: 'æ', word: "sad", phonetic: "s æ d", end: "d"},
+        {vowel: 'æ', word: "dad", phonetic: "d æ d", end: "d"},
+        {vowel: 'æ', word: "pan", phonetic: "p æ n", end: "n"},
+        {vowel: 'æ', word: "can", phonetic: "k æ n", end: "n"},
+        {vowel: 'æ', word: "man", phonetic: "m æ n", end: "n"},
+        {vowel: 'æ', word: "fat", phonetic: "f æ t", end: "t"},
+        {vowel: 'æ', word: "cat", phonetic: "k æ t", end: "t"},
+        {vowel: 'æ', word: "rat", phonetic: "r æ t", end: "t"},
+        {vowel: 'æ', word: "rash", phonetic: "r æ ʃ", end: "sh"},
+        {vowel: 'æ', word: "tan", phonetic: "t æ n", end: "n"},
+        {vowel: 'æ', word: "task", phonetic: "t æ s k", end: "sk"},
+        {vowel: 'æ', word: "fact", phonetic: "f æ k t", end: "ct"},
+        {vowel: 'æ', word: "fast", phonetic: "f æ s t", end: "st"},
+        {vowel: 'æ', word: "land", phonetic: "l æ n d", end: "nd"},
+        {vowel: 'æ', word: "sand", phonetic: "s æ n d", end: "nd"},
+        {vowel: 'æ', word: "dance", phonetic: "d æ n s", end: "nce"},
+        {vowel: 'æ', word: "pant", phonetic: "p æ n t", end: "nt"},
+        {vowel: 'æ', word: "band", phonetic: "b æ n d", end: "nd"},
+        {vowel: 'æ', word: "catch", phonetic: "k æ t j", end: "tch"},
+        {vowel: 'æ', word: "rank", phonetic: "r æ ŋ k", end: "nk"},
+        {vowel: 'æ', word: "ranch", phonetic: "r æ n t j", end: "nch"},
+        {vowel: 'æ', word: "graph", phonetic: "ɡ r æ f", end: "ph"},
+        {vowel: 'æ', word: "grass", phonetic: "ɡ r æ s", end: "ss"},
+        {vowel: 'æ', word: "glad", phonetic: "ɡ l æ d", end: "d"},
+        {vowel: 'æ', word: "glass", phonetic: "ɡ l æ s", end: "ss"},
+        {vowel: 'æ', word: "crab", phonetic: "k r æ b", end: "b"},
+        {vowel: 'æ', word: "drag", phonetic: "d r æ ɡ", end: "g"},
+        {vowel: 'æ', word: "crack", phonetic: "k r æ k", end: "ck"},
+        {vowel: 'æ', word: "track", phonetic: "t r æ k", end: "ck"},
+        {vowel: 'æ', word: "trash", phonetic: "t r æ ʃ", end: "sh"},
+        {vowel: 'æ', word: "scan", phonetic: "s k æ n", end: "n"},
+        {vowel: 'æ', word: "plan", phonetic: "p l æ n", end: "n"},
+        {vowel: 'æ', word: "black", phonetic: "b l æ k", end: "ck"},
+        {vowel: 'æ', word: "brand", phonetic: "b r æ n d", end: "nd"},
+        {vowel: 'æ', word: "grand", phonetic: "ɡ r æ n d", end: "nd"},
+        {vowel: 'æ', word: "prank", phonetic: "p r æ ŋ k", end: "nk"},
+        {vowel: 'æ', word: "draft", phonetic: "d r æ f t", end: "ft"},
+        {vowel: 'æ', word: "branch", phonetic: "b r æ n t j", end: "ntj"},
+        {vowel: 'æ', word: "scratch", phonetic: "s k r æ t j", end: "tch"},
     ];
     
     const wordVersusBank = [
@@ -513,6 +558,127 @@ $(document).ready(function(){
         {vowel: 'ɑ: vs. oʊ', words: [
             {word: "jog", phonetic: "d j ɑ: ɡ", end: "g"}, 
             {word: "joke", phonetic: "d j oʊ k", end: "ke"}]
+        },
+
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "bed", phonetic: "b e d", end: "d"}, 
+            {word: "bade", phonetic: "b eɪ d", end: "de"},
+            {word: "bad", phonetic: "b æ d", end: "d"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "bet", phonetic: "b e t", end: "t"}, 
+            {word: "bathe", phonetic: "b eɪ ð", end: "the"},
+            {word: "bat", phonetic: "b æ t", end: "t"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "pen", phonetic: "p e n", end: "n"}, 
+            {word: "pain", phonetic: "p eɪ n", end: "n"},
+            {word: "pan", phonetic: "p æ n", end: "n"}]
+        },//-------------------
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "men", phonetic: "m e n", end: "n"}, 
+            {word: "man", phonetic: "m æ n", end: "n"},
+            {word: "main", phonetic: "m eɪ n", end: "n"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "med", phonetic: "m e d", end: "d"}, 
+            {word: "mad", phonetic: "m æ d", end: "d"},
+            {word: "made", phonetic: "m eɪ d", end: "de"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "beg", phonetic: "b e ɡ", end: "g"}, 
+            {word: "bag", phonetic: "b æ ɡ", end: "g"},
+            {word: "bake", phonetic: "b eɪ k", end: "ke"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "het", phonetic: "h e t", end: "t"}, 
+            {word: "hat", phonetic: "h æ t", end: "t"},
+            {word: "hate", phonetic: "h eɪ t", end: "te"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "fed", phonetic: "f e d", end: "d"}, 
+            {word: "fad", phonetic: "f æ d", end: "d"},
+            {word: "fade", phonetic: "f eɪ d", end: "de"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "said", phonetic: "s e d", end: "d"}, 
+            {word: "sad", phonetic: "s æ d", end: "d"},
+            {word: "sate", phonetic: "s eɪ t", end: "te"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "pet", phonetic: "p e t", end: "t"}, 
+            {word: "pat", phonetic: "p æ t", end: "t"},
+            {word: "pate", phonetic: "p eɪ t", end: "te"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "debt", phonetic: "d e t", end: "bt"}, 
+            {word: "DAT", phonetic: "d æ t", end: "T"},
+            {word: "date", phonetic: "d eɪ t", end: "te"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "rent", phonetic: "r e n t", end: "nt"}, 
+            {word: "ran", phonetic: "r æ n", end: "n"},
+            {word: "rain", phonetic: "r eɪ n", end: "n"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "lend", phonetic: "l e n d", end: "nd"}, 
+            {word: "land", phonetic: "l æ n d", end: "nd"},
+            {word: "lane", phonetic: "l eɪ n", end: "ne"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "lest", phonetic: "l e s t", end: "st"}, 
+            {word: "last", phonetic: "l æ s t", end: "st"},
+            {word: "lace", phonetic: "l eɪ s", end: "ce"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "vest", phonetic: "v e s t", end: "st"}, 
+            {word: "vast", phonetic: "v æ s t", end: "st"},
+            {word: "vase", phonetic: "v eɪ s", end: "se"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "pest", phonetic: "p e s t", end: "st"}, 
+            {word: "past", phonetic: "p æ s t", end: "st"},
+            {word: "paste", phonetic: "p eɪ s t", end: "ste"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "send", phonetic: "s e n d", end: "nd"}, 
+            {word: "sand", phonetic: "s æ n d", end: "nd"},
+            {word: "saint", phonetic: "s eɪ n t", end: "nt"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "chef", phonetic: "ʃ e f", end: "f"}, 
+            {word: "shaft", phonetic: "ʃ æ f t", end: "ft"},
+            {word: "shape", phonetic: "ʃ eɪ p", end: "pe"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "test", phonetic: "t e s t", end: "st"}, 
+            {word: "task", phonetic: "t æ s k", end: "sk"},
+            {word: "taste", phonetic: "t eɪ s t", end: "ste"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "ketch", phonetic: "k e tʃ", end: "tch"}, 
+            {word: "catch", phonetic: "k æ tʃ", end: "tch"},
+            {word: "cage", phonetic: "k eɪ dʒ", end: "ge"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "cress", phonetic: "k r e s", end: "ss"}, 
+            {word: "crass", phonetic: "k r æ s", end: "ss"},
+            {word: "craze", phonetic: "k r eɪ z", end: "ze"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "bread", phonetic: "b r e d", end: "d"}, 
+            {word: "brag", phonetic: "b r æ ɡ", end: "g"},
+            {word: "break", phonetic: "b r eɪ k", end: "k"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "dreck", phonetic: "d r e k", end: "ck"}, 
+            {word: "drag", phonetic: "d r æ ɡ", end: "g"},
+            {word: "drake", phonetic: "d r eɪ k", end: "ke"}]
+        },
+        {vowel: 'e vs. eɪ vs. æ', words: [
+            {word: "trek", phonetic: "t r e k", end: "k"}, 
+            {word: "track", phonetic: "t r æ k", end: "ck"},
+            {word: "trade", phonetic: "t r eɪ d", end: "de"}]
         },
     ];
 
@@ -665,16 +831,14 @@ $(document).ready(function(){
                 if (isVersusMode){
                     let wordEntryElement = $(`
                         <div class="card p-0 show" data-name="${item.vowel}">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item versus-word" style="border: none; background: unset;">
-                                    <h4 class="card-title">/ ${formatPhoneticText(item?.words[0]?.phonetic)} /</h4>
-                                    <h5 class="card-text">${boldWordEnd(item?.words[0]?.word, item?.words[0]?.end)}</h5>
-                                </li>
-                                <li class="list-group-item versus-vstext" style="border: none; background: unset;"><span>vs.<span></li>
-                                <li class="list-group-item versus-word" style="border: none; background: unset;">
-                                    <h4 class="card-title">/ ${formatPhoneticText(item?.words[1]?.phonetic)} /</h4>
-                                    <h5 class="card-text">${boldWordEnd(item?.words[1]?.word, item?.words[1]?.end)}</h5>
-                                </li>
+                            <ul class="list-group list-group-flush">${
+                                item?.words?.map(x=>{
+                                    return `<li class="list-group-item versus-word" style="border: none; background: unset;">
+                                    <h4 class="card-title">/ ${formatPhoneticText(x.phonetic)} /</h4>
+                                    <h5 class="card-text">${boldWordEnd(x.word, x.end)}</h5>
+                                </li>`;
+                                }).join(`<li class="list-group-item versus-card-text"><span>vs.<span></li>`)
+                            }
                             </ul>
                         </div>`);
             
