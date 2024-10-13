@@ -23,7 +23,8 @@ $(document).ready(function(){
         "eɪ",
         "æ",
         "ɪ",
-        "i:"
+        "i:",
+        "ʊ"
     ];
 
     const vowelVersusMenuItems = [
@@ -34,11 +35,11 @@ $(document).ready(function(){
 
 
     vowelMenuItems.forEach((v, idx) =>{
-        $("#filter-buttons .vowels").append(`<button class="btn mb-2 mx-1" data-filter="${v}">${v}</button>`);
+        $("#filter-buttons .vowels").append(`<button type="button" class="btn mb-2 mx-1" data-filter="${v}">${v}</button>`);
     });
 
     vowelVersusMenuItems.forEach((v, idx) =>{
-        $("#filter-buttons .vowels-versus").append(`<button class="btn mb-2 mx-1" data-filter="${v.join(' vs. ')}">${v.join(" <span class='versus-menu-text'>vs.</span> ")}</button>`);
+        $("#filter-buttons .vowels-versus").append(`<button type="button" class="btn mb-2 mx-1" data-filter="${v.join(' vs. ')}">${v.join(" <span class='versus-menu-text'>vs.</span> ")}</button>`);
     });
     
     const wordBank = [
@@ -514,6 +515,49 @@ $(document).ready(function(){
         {vowel: 'i:', word: "cheese", phonetic: "t j i: z", end: "se"},
         {vowel: 'i:', word: "cheek", phonetic: "t j i: k", end: "k"},
         {vowel: 'i:', word: "G", phonetic: "d j i:", end: ""},
+
+        {vowel: 'ʊ', word: "tour", phonetic: "t ʊ r", end: "r"},
+        {vowel: 'ʊ', word: "took", phonetic: "t ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "look", phonetic: "l ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "book", phonetic: "b ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "cook", phonetic: "k ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "hook", phonetic: "h ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "sook", phonetic: "s ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "shook", phonetic: "ʃ ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "foot", phonetic: "f ʊ t", end: "t"},
+        {vowel: 'ʊ', word: "put", phonetic: "p ʊ t", end: "t"},
+        {vowel: 'ʊ', word: "soot", phonetic: "s ʊ t", end: "t"},
+        {vowel: 'ʊ', word: "hood", phonetic: "h ʊ d", end: "d"},
+        {vowel: 'ʊ', word: "wood", phonetic: "w ʊ d", end: "d"},
+        {vowel: 'ʊ', word: "could", phonetic: "k ʊ d", end: "ld"},
+        {vowel: 'ʊ', word: "should", phonetic: "ʃ ʊ d", end: "ld"},
+        {vowel: 'ʊ', word: "push", phonetic: "p ʊ ʃ", end: "sh"},
+        {vowel: 'ʊ', word: "lure", phonetic: "l ʊ r", end: "re"},
+        {vowel: 'ʊ', word: "sure", phonetic: "ʃ ʊ r", end: "re"},
+        {vowel: 'ʊ', word: "full", phonetic: "f ʊ l", end: "ll"},
+        {vowel: 'ʊ', word: "bull", phonetic: "b ʊ l", end: "ll"},
+        {vowel: 'ʊ', word: "pull", phonetic: "p ʊ l", end: "ll"},
+        {vowel: 'ʊ', word: "good", phonetic: "ɡ ʊ d", end: "d"},
+        {vowel: 'ʊ', word: "goods", phonetic: "ɡ ʊ d z", end: "ds"},
+        {vowel: 'ʊ', word: "poor", phonetic: "p ʊ r", end: "r"},
+        {vowel: 'ʊ', word: "pure", phonetic: "p j ʊ r", end: "re"},
+        {vowel: 'ʊ', word: "cure", phonetic: "k j ʊ r", end: "re"},
+        {vowel: 'ʊ', word: "brook", phonetic: "b r ʊ k", end: "k"},
+        {vowel: 'ʊ', word: "spoor", phonetic: "s p ʊ r", end: "r"},
+        {vowel: 'ʊ', word: "amour", phonetic: "ə ˈmʊr", end: "r"},
+        {vowel: 'ʊ', word: "allure", phonetic: "ə ˈlʊr", end: "re"},
+        {vowel: 'ʊ', word: "assure", phonetic: "ə ˈʃʊr", end: "re"},
+        {vowel: 'ʊ', word: "ensure", phonetic: "ɪn ˈʃʊr", end: "re"},
+        {vowel: 'ʊ', word: "mature", phonetic: "mə ˈtʊr", end: "re"},
+        {vowel: 'ʊ', word: "rookie", phonetic: "ˈrʊ ki", end: ""},
+        {vowel: 'ʊ', word: "cookie", phonetic: "ˈkʊ ki", end: ""},
+        {vowel: 'ʊ', word: "cooker", phonetic: "ˈkʊ kər", end: "r"},
+        {vowel: 'ʊ', word: "detour", phonetic: "ˈdi: tʊr", end: "r"},
+        {vowel: 'ʊ', word: "parkour", phonetic: "pɑ:r ˈkʊr", end: "r"},
+        {vowel: 'ʊ', word: "adjure", phonetic: "ə ˈdjʊr", end: "re"},
+        {vowel: 'ʊ', word: "secure", phonetic: "sɪ ˈkjʊr", end: "re"},
+        {vowel: 'ʊ', word: "brochure", phonetic: "broʊ ˈʃʊr", end: "re"},
+        {vowel: 'ʊ', word: "checkbook", phonetic: "ˈtjek bʊk", end: "k"},
     ];
     
     const wordVersusBank = [
@@ -919,6 +963,7 @@ $(document).ready(function(){
                 if (isVersusMode){
                     let wordEntryElement = $(`
                         <div class="card p-0 show" data-name="${item.vowel}">
+                            <div class="word-number">${idx+1}</div>
                             <ul class="list-group list-group-flush">${
                                 item?.words?.map(x=>{
                                     return `<li class="list-group-item versus-word" style="border: none; background: unset;">
@@ -938,6 +983,7 @@ $(document).ready(function(){
                             <div class="card-body">
                                 <h4 class="card-title">/ ${formatPhoneticText(item.phonetic)} /</h4>
                                 <h5 class="card-text">${boldWordEnd(item.word, item.end)}</h5>
+                                <div class="word-number">${idx+1}</div>
                             </div>
                         </div>`);
             

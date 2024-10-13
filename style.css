@@ -89,3 +89,15 @@ body {
 .versus-menu-text{
     color: #333; font-size: .8rem; font-style: italic; pointer-events: none;
 }
+
+.word-number{
+    float: right;
+    position: absolute;
+    font-size: 4rem;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    color: #95959517;
+    padding: 0;
+    margin: 0;
+}
